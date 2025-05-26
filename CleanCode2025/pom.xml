@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- مقادیر زیر را به دلخواه یا بر اساس نامگذاری پروژه خود تغییر دهید -->
+    <groupId>com.yourcompany.tetris</groupId> <!-- مثال: com.sharif.ce.tetris -->
+    <artifactId>TetrisCleanCode</artifactId>   <!-- نام پروژه شما -->
+    <version>1.0-SNAPSHOT</version>          <!-- نسخه پروژه -->
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- نسخه جاوایی که برای نوشتن و کامپایل کد استفاده می‌کنید -->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <!-- نسخه JavaFX که می‌خواهید استفاده کنید -->
+        <javafx.version>17.0.6</javafx.version> <!-- یا یک نسخه جدیدتر/سازگار دیگر مثل 17.0.2، 21، 22 و ... -->
+        <!-- مطمئن شوید JDK شما با این نسخه سازگار است -->
+    </properties>
+
+    <dependencies>
+        <!-- وابستگی برای خواندن و نوشتن فایل JSON (کتابخانه Gson) -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version> <!-- می‌توانید آخرین نسخه پایدار را بررسی و جایگزین کنید -->
+        </dependency>
+
+        <!-- وابستگی‌های JavaFX -->
+        <!-- ماژول کنترل‌های JavaFX (دکمه‌ها، لیبل‌ها و ...) -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <!-- ماژول FXML برای طراحی رابط کاربری (اگر از FXML استفاده می‌کنید) -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <!-- ماژول گرافیکی JavaFX (برای ترسیم و موارد گرافیکی پیشرفته‌تر) -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <!-- در صورت نیاز به ماژول‌های دیگر JavaFX (مثل web, media, swing) می‌توانید اضافه کنید -->
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- پلاگین کامپایلر Maven برای تعیین نسخه جاوا -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version> <!-- یا نسخه جدیدتر -->
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+
+            <!-- پلاگین JavaFX Maven برای ساده‌سازی کار با JavaFX -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version> <!-- یا آخرین نسخه موجود -->
+                <executions>
+                    <execution>
+                        <!-- پیکربندی پیش‌فرض برای اجرا با: mvn clean javafx:run -->
+                        <id>default-cli</id>
+                        <configuration>
+                            <!-- کلاس اصلی برنامه JavaFX شما در اینجا قرار می‌گیرد -->
+                            <!-- برای مثال: <mainClass>com.yourcompany.tetris.MainApp</mainClass> -->
+                            <!-- فعلاً آن را کامنت نگه دارید تا بعد از ایجاد پکیج و کلاس اصلی، آن را تنظیم کنید -->
+                            <!-- <mainClass>com.yourcompany.tetris.MainApplication</mainClass> -->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

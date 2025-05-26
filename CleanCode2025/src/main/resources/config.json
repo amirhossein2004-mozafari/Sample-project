@@ -1,0 +1,73 @@
+{
+  "rows": 20,
+  "cols": 10,
+  "gameSpeed": 300,
+  "initialShapeX": 4,
+  "initialShapeY": 0,
+  "cellSize": 20,
+  "tetrominoes": [
+    {
+      "name": "L",
+      "rotations": [
+        { "xCoords": [1, 0, 0, 0], "yCoords": [2, 2, 1, 0] },
+        { "xCoords": [0, 1, 2, 2], "yCoords": [1, 1, 1, 0] },
+        { "xCoords": [1, 1, 1, 0], "yCoords": [2, 1, 0, 0] },
+        { "xCoords": [0, 0, 1, 2], "yCoords": [1, 0, 0, 0] }
+      ]
+    },
+    {
+      "name": "S",
+      "rotations": [
+        { "xCoords": [0, 1, 1, 2], "yCoords": [1, 1, 0, 0] },
+        { "xCoords": [1, 1, 0, 0], "yCoords": [2, 1, 1, 0] },
+        { "xCoords": [0, 1, 1, 2], "yCoords": [1, 1, 0, 0] },
+        { "xCoords": [1, 1, 0, 0], "yCoords": [2, 1, 1, 0] }
+      ]
+    },
+    {
+      "name": "Z",
+      "rotations": [
+        { "xCoords": [2, 1, 1, 0], "yCoords": [1, 1, 0, 0] },
+        { "xCoords": [1, 1, 0, 0], "yCoords": [0, 1, 1, 2] },
+        { "xCoords": [2, 1, 1, 0], "yCoords": [1, 1, 0, 0] },
+        { "xCoords": [1, 1, 0, 0], "yCoords": [0, 1, 1, 2] }
+      ]
+    },
+    {
+      "name": "RL",
+      "rotations": [
+        { "xCoords": [0, 1, 1, 1], "yCoords": [2, 2, 1, 0] },
+        { "xCoords": [2, 2, 1, 0], "yCoords": [1, 0, 0, 0] },
+        { "xCoords": [0, 0, 0, 1], "yCoords": [2, 1, 0, 0] },
+        { "xCoords": [2, 1, 0, 0], "yCoords": [1, 1, 1, 0] }
+      ]
+    },
+    {
+      "name": "T",
+      "rotations": [
+        { "xCoords": [1, 2, 1, 0], "yCoords": [1, 0, 0, 0] },
+        { "xCoords": [0, 0, 0, 1], "yCoords": [2, 1, 0, 1] },
+        { "xCoords": [2, 1, 0, 1], "yCoords": [1, 1, 1, 0] },
+        { "xCoords": [1, 1, 1, 0], "yCoords": [2, 1, 0, 1] }
+      ]
+    },
+    {
+      "name": "SQ",
+      "rotations": [
+        { "xCoords": [1, 0, 1, 0], "yCoords": [1, 1, 0, 0] },
+        { "xCoords": [1, 0, 1, 0], "yCoords": [1, 1, 0, 0] },
+        { "xCoords": [1, 0, 1, 0], "yCoords": [1, 1, 0, 0] },
+        { "xCoords": [1, 0, 1, 0], "yCoords": [1, 1, 0, 0] }
+      ]
+    },
+    {
+      "name": "I",
+      "rotations": [
+        { "xCoords": [0, 0, 0, 0], "yCoords": [3, 2, 1, 0] },
+        { "xCoords": [0, 1, 2, 3], "yCoords": [0, 0, 0, 0] },
+        { "xCoords": [0, 0, 0, 0], "yCoords": [3, 2, 1, 0] },
+        { "xCoords": [0, 1, 2, 3], "yCoords": [0, 0, 0, 0] }
+      ]
+    }
+  ]
+}
