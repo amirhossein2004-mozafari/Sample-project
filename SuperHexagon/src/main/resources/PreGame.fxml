@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.PreGameController" prefHeight="300.0" prefWidth="400.0"
+      style="-fx-background-color: #333;">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+
+    <Label text="SUPER HEXAGON" textFill="white">
+        <font>
+            <Font name="Arial Bold" size="24.0"/>
+        </font>
+        <VBox.margin>
+            <Insets bottom="20.0"/>
+        </VBox.margin>
+    </Label>
+
+
+    <Label text="Enter Your Name:" textFill="white"/>
+
+
+    <TextField fx:id="playerNameField" promptText="Player Name" maxWidth="200.0"/>
+
+
+    <Button fx:id="startButton" mnemonicParsing="false" onAction="#handleStartGame" text="Start Game">
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+    </Button>
+</VBox>

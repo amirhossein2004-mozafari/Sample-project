@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER_LEFT" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.SettingsController" prefHeight="400.0" prefWidth="500.0"
+      style="-fx-background-color: linear-gradient(to bottom, #3a4a5a, #212c35);">
+    <padding>
+        <Insets bottom="30.0" left="40.0" right="40.0" top="30.0"/>
+    </padding>
+
+    <Label text="Settings" textAlignment="CENTER" maxWidth="Infinity" alignment="CENTER">
+        <font><Font name="Arial Bold" size="32.0"/></font>
+        <textFill><Color red="0.92" green="0.94" blue="0.96"/></textFill>
+        <VBox.margin><Insets bottom="30.0"/></VBox.margin>
+    </Label>
+
+    <HBox alignment="CENTER_LEFT" spacing="15.0">
+        <children>
+            <CheckBox fx:id="musicCheckBox" mnemonicParsing="false" onAction="#handleMusicToggle" text="Enable Background Music">
+                <textFill><Color red="0.9" green="0.9" blue="0.9"/></textFill>
+                <font><Font size="16.0"/></font>
+            </CheckBox>
+        </children>
+        <VBox.margin><Insets top="10.0"/></VBox.margin>
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" spacing="15.0">
+        <children>
+            <CheckBox fx:id="historyCheckBox" mnemonicParsing="false" onAction="#handleHistoryToggle" text="Save Game History"> <!-- متن آپدیت شد -->
+                <textFill><Color red="0.9" green="0.9" blue="0.9"/></textFill>
+                <font><Font size="16.0"/></font>
+            </CheckBox>
+        </children>
+        <VBox.margin><Insets top="10.0"/></VBox.margin>
+    </HBox>
+
+    <VBox VBox.vgrow="ALWAYS"/>
+
+    <HBox alignment="CENTER_RIGHT">
+        <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBack" text="Back to Main Menu"
+                    prefHeight="40.0" prefWidth="180.0"
+                    style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 5;">
+                <HBox.margin><Insets top="20.0"/></HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+
+</VBox>

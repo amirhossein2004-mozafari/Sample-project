@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.MainMenuController" prefHeight="500.0" prefWidth="700.0"
+      style="-fx-background-color: linear-gradient(to bottom, #2c3e50, #1a252f);">
+    <padding>
+        <Insets bottom="30.0" left="50.0" right="50.0" top="30.0"/>
+    </padding>
+
+    <Label text="SUPER HEXAGON" textAlignment="CENTER">
+        <font>
+            <Font name="Consolas Bold" size="44.0"/>
+        </font>
+        <textFill>
+            <Color red="0.92" green="0.94" blue="0.96"/>
+        </textFill>
+        <VBox.margin>
+            <Insets bottom="30.0"/>
+        </VBox.margin>
+    </Label>
+
+    <HBox alignment="CENTER" spacing="10.0">
+        <children>
+            <Label text="Best Time:" textFill="#bdc3c7">
+                <font>
+                    <Font name="Segoe UI Semibold" size="18.0"/>
+                </font>
+            </Label>
+            <Label fx:id="bestScoreValueLabel" text="0.00" textFill="#e74c3c">
+                <font>
+                    <Font name="Consolas Bold" size="20.0"/>
+                </font>
+            </Label>
+        </children>
+        <VBox.margin>
+            <Insets bottom="25.0"/>
+        </VBox.margin>
+    </HBox>
+
+    <Button fx:id="newGameButton" onAction="#handleNewGame" text="New Game" maxWidth="250.0" prefHeight="45.0"
+            style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+
+    <Button fx:id="historyButton" onAction="#handleHistory" text="Game History" maxWidth="250.0" prefHeight="45.0"
+            style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+
+    <Button fx:id="settingsButton" onAction="#handleSettings" text="Settings" maxWidth="250.0" prefHeight="45.0"
+            style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+
+    <Button fx:id="exitButton" onAction="#handleExit" text="Exit Game" maxWidth="250.0" prefHeight="45.0"
+            style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 5;">
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+    </Button>
+
+</VBox>
